@@ -48,6 +48,7 @@
   margin: 10px 0 0 40px;
   background-color: green;
   color: yellow;
+  border-radius: 20px;
 }
 
 .btn-user-home {
@@ -55,9 +56,28 @@
   margin: 10px 0 0 0;
 }
 
-.btn-home {
+.btn-home, .btn-logout {
   text-align: center;
-  background-color: blue;
-  color: magenta;
+  background-color: lightblue;
+  color: red;
+  border-radius: 20px;
 
+}
+
+.page {
+  margin-left: 30px;
+}
+
+.skills-table, th {
+  border: 1px solid black;
+}
+
+.table-head {
+  width: 200px;
+  text-align: center;
+  background-color: lightblue;
+}
+
+.table-body {
+  text-align: center;
 }

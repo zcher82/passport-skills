@@ -1,40 +1,45 @@
 <div class="btn-user-home">
   <a href="#user"><button type="button" name="home" class="btn-home">user home</button></a>
+  <button type="button" name="logout" class="btn-logout" ng-click="logout()">Log out</button>
 </div>
 
+<div class="page">
 
-<h2>Skills</h2>
 
-<section class="input">
-  <div class="skills-input">
-    <form class="skills-input-form">
-      <label for="skill">Skill:</label>
-      <input type="text" name="skill" ng-model="newSkill.skill" placeholder="skill...">
+  <section class="input">
+    <h3>Add a skill</h3>
+    <div class="skills-input">
+      <form class="skills-input-form">
+        <label for="skill">Skill:</label>
+        <input type="text" name="skill" ng-model="newSkill.skill" placeholder="add skill...">
 
-      <label for="experience">Years of experience:</label>
-      <input type="text" name="experience" ng-model="newSkill.experience" placeholder="years of experience...">
+        <label for="experience">Years of experience:</label>
+        <input type="text" name="experience" ng-model="newSkill.years" placeholder="years of experience...">
 
-      <button type="button" name="submit" class="btn-submit-skill" ng-click="submitSkill()">Submit</button>
+        <button type="button" name="submit" class="btn-submit-skill" ng-click="submitSkill(userInfo._id)">Submit</button>
 
-    </form>
-  </div>
-</section>
+      </form>
+    </div>
+  </section>
+  <br><br><br>
 
-<section class="display">
-  <div class="skills-display">
-    <table>
-      <thead>
-        <tr>
-          <th>Skill</th>
-          <th>Experience (yrs)</th>
+  <section class="display">
+    <h3>Skills</h3>
+    <div class="skills-display">
+      <table class="skills-table">
+        <thead>
+          <tr>
+            <th class="table-head">Skill</th>
+            <th class="table-head">Experience (yrs)</th>
+          </tr>
+        </thead>
+        <tr ng-repeat="skill in userInfo.skills">
+          <th class="table-body">{{skill.skill}}</th>
+          <th class="table-body">{{skill.years}}</th>
         </tr>
-      </thead>
-      <tr>
-        <th></th>
-        <th></th>
-      </tr>
-    </table>
+      </table>
 
-  </div>
+    </div>
 
-</section>
+  </section>
+</div>

@@ -1,12 +1,15 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var SkillSchema = require('./skill').schema;
 var bcrypt = require('bcrypt');
 var SALT_WORK_FACTOR = 10;
+
 
 // Mongoose Schema
 var UserSchema = new Schema({
     username: {type: String, required: true, index: {unique: true}},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
+    skills: [SkillSchema]
 });
 
 // Called before adding a new user to the DB. Encrypts password.
