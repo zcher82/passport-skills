@@ -1,0 +1,40 @@
+<div class="btn-user-home">
+  <a href="#user"><button type="button" name="home" class="btn-home">user home</button></a>
+</div>
+
+
+<h2>Skills</h2>
+
+<section class="input">
+  <div class="skills-input">
+    <form class="skills-input-form">
+      <label for="skill">Skill:</label>
+      <input type="text" name="skill" ng-model="newSkill.skill" placeholder="skill...">
+
+      <label for="experience">Years of experience:</label>
+      <input type="text" name="experience" ng-model="newSkill.experience" placeholder="years of experience...">
+
+      <button type="button" name="submit" class="btn-submit-skill" ng-click="submitSkill()">Submit</button>
+
+    </form>
+  </div>
+</section>
+
+<section class="display">
+  <div class="skills-display">
+    <table>
+      <thead>
+        <tr>
+          <th>Skill</th>
+          <th>Experience (yrs)</th>
+        </tr>
+      </thead>
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+    </table>
+
+  </div>
+
+</section>
